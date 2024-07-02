@@ -146,13 +146,15 @@
                 <div class="row"> <!-- create two columns-->
                     <div class="contact-left">
                         <h1 class="sub-title">Contact Me</h1>
-                        <p><i class="fa-solid fa-envelope"></i> estherfshue@gmail.com</p>
-                        <p><i class="fa-solid fa-heart"></i> (240)-389-7504</p>
+                        <p>Click icon to copy to clipboard:</p>
                         <div class="social-icons">
-                            <a href=""><i class="fa-solid fa-heart"></i></a>
-                            <a href=""><i class="fa-solid fa-heart"></i></a>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                            <a href="www.linkedin.com/in/esthershue"><i class="fa-brands fa-linkedin"></i></i></a>
+                            <p id="email"><button onclick="copyText('email')"><i class="fa-solid fa-envelope"></i></button>estherfshue@gmail.com</p>
+                            <p id="phone"><button onclick="copyText('phone')"><i class="fa-solid fa-phone"></i></button>(240)-389-7504</p>
+                            <p id="github"><button onclick="copyText('github')"><i class="fa-brands fa-github"></i></button>https://github.com/esthershue</p>
+                            <p id="linkedin"><button onclick="copyText('linkedin')"><i class="fa-brands fa-linkedin"></i></button>www.linkedin.com/in/esthershue</p>
+                        </div>
+                        <div class="resume">
+
                         </div>
                         <a href="images/Esther_Shue_Resume.pdf" download class="btn btn2">Download Resume</a>
                     </div>
@@ -216,6 +218,21 @@
                     })
                     .catch(error => console.error('Error!', error.message))
             })
+        </script>
+
+        <script>
+            function copyText(elementId) {
+                var element = document.getElementById(elementId);
+                var text = element.textContent.trim();
+
+                navigator.clipboard.writeText(text).then(function() {
+                    alert("Copied to clipboard.");
+                }).catch(function(error) {
+                    console.error("Failed to copy text.", error);
+                    alert("Failed to copy text.");
+                });
+                
+            }
         </script>
 
     </body>
