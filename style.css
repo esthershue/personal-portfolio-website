@@ -282,9 +282,6 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 .work:hover .layer{
     opacity: 0;
 }
-.work:hover .layer p{
-    opacity: 0;
-}
 .btn{
     display: block;
     margin: 10px auto;
