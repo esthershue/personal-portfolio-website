@@ -1,5 +1,5 @@
 # Personal Portfolio Website
 ## Description:
-###### This website was developed with HTML, CSS, and JavaScript. It showcases my personal portfolio, including education and work experience, projects I have worked on, related skills, and a contact me section.
+#### This website was developed with HTML, CSS, and JavaScript. It showcases my personal portfolio, including education and work experience, projects I have worked on, related skills, and a contact me section.
 
 
