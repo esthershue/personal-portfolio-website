@@ -64,6 +64,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    font-weight: bold;
 }
 nav .fa-solid{
     color: #213240;
@@ -86,29 +87,35 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     padding: 100px 0;
 }
 .container{
-    padding: 10px 10%;
+    padding: 50px 10%;
     align-items: center;
 }
 .home-text{
     margin-top: 10%;
-    border: 10px solid;
-    border-radius: 20px;
-    border-color: #213240;
-    background-color: #213240;
     text-align: left;
     display: inline-block;
 }
 .home-text h1{
-    font-size: 30px;
+    font-size: 55px;
     padding: 40px;
-}
-.home-text h1 span{
-    color: #e62739;
-    font-size: 50px;
-}
-.home-text hr{
     color: #213240;
 }
+.home-text h1 span{
+    color: #6ed3cf;
+    font-size: 60px;
+    float: right;
+}
+.mandarin-text{
+    writing-mode: vertical-rl;
+}
+/*.home-text hr{
+    color: #213240;
+    height: 10px;
+}
+.home-text div{
+    color: #213240;
+    width: max-content;
+}*/
 
 /* ------------------------- about ------------------------- */
 #about{
@@ -130,6 +137,9 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 .about-col-2{
     flex-basis: 60%;
 }
+.about-col-2 p{
+    font-size: 18px;
+}
 .sub-title{
     margin-bottom: 2.5%;
     font-size: 60px;
@@ -143,8 +153,8 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
 }
@@ -167,7 +177,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .tab-contents ul li span{
     color: #213240;
-    font-size: 14px;
+    font-size: 18px;
 }
 .tab-contents{
     display: none;
@@ -188,7 +198,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 
 /* ------------------------- experience ------------------------- */
 #experience{
-    padding: 100px 0;
+    padding: 60px 0;
 }
 .experience{
     display: grid;
@@ -215,6 +225,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     font-weight: 500;
     margin-bottom: 15px;
     padding: 20px;
+    text-align: center;
 }
 .experience div a{
     text-decoration: none;
@@ -224,6 +235,16 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     margin-top: 20px;
     display: inline-block;
 }
+.experience div p{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff004f;
+}
+.experience div ul{
+    color: #fff;
+    text-align: left;
+}
 .experience div:hover{
     background: #b58ee1;
     transform: translateY(-10px); /* moves up 10 pixels when hovered over */
@@ -231,7 +252,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 
 /* ------------------------- portfolio ------------------------- */
 #portfolio{
-    padding: 60px 0; /* 50 from top and bottom ,0 from left and right */
+    padding: 28px 0; /* 50 from top and bottom ,0 from left and right */
 }
 .work-list{
     display: grid;
@@ -248,7 +269,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     height: 500px;
 }
 .work div p{
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     padding: 50px;
     color: #213240;
@@ -260,9 +281,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     text-align: left;
     opacity: 0;
 }
-.work div a{
-    cursor: pointer;
-}
+
 .layer{
     width: 100%;
     height: 100%;
@@ -292,8 +311,8 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     font-size: 25px;
 }
 .layer p2{
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
     color: #fff;
     opacity: 1;
     margin-top: 20px;
@@ -309,6 +328,11 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .work:hover .layer{
     opacity: 0;
+}
+.work:hover div a{
+    cursor: pointer;
+    text-align: center;
+    opacity: 1;
 }
 .btn{
     display: block;
@@ -338,6 +362,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 .contact-left p{
     margin-top: 30px;
     color: #213240;
+    font-size: 18px;
 }
 .contact-left p i{
     color: #b58ee1;
@@ -357,7 +382,6 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     position: relative;
 }
 .social-icons button:hover{
-    color: #7AA4FF;
     transform: translateY(-5px);
 }
 .social-icons a{
@@ -368,17 +392,17 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #7AA4FF;
     transform: translateY(-5px);
 }
 .btn.btn2{
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: inline-block;
     background: #b58ee1;
     border-color: #b58ee1;
     cursor: pointer;
     position: relative;
+    font-size: 18px;
 }
 .btn.btn2:hover{
     border-color: #e62739;
@@ -412,7 +436,7 @@ form .btn2{
     text-align: center;
     padding: 25px;
     background: #213240;
-    font-weight: 300;
+    font-weight: bold;
     margin-top: 20px;
 }
 
