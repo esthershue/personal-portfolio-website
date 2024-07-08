@@ -6,25 +6,35 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Personal Portfolio Website</title>
         <link rel="stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script src="https://kit.fontawesome.com/780a7e9f6f.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="header">
-            <div class="container">
+        <!------------------------- navigation bar ------------------------->
+        <div id="navbar">
+            <div class="navbar-container">
+                <div class="spacer"></div>
                 <nav>
-                    <img src="images/logo.png" class="logo">
-                    <ul id="sidemenu"> <!--for ordered list-->
-                        <li><a href="#header">Home</a></li> <!--create a tag to make a clickable link-->
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <!-- <img src="images/logo.png" class="logo"> -->
+                    <h1>Esther Shue</h1>
+                    <ul id="sidemenu">
+                        <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li> <!--create a tag to make a clickable link-->
+                        <li><a href="#about"><i class="fa-solid fa-house"></i>About</a></li>
+                        <li><a href="#experience"><i class="fa-solid fa-house"></i>Experience</a></li>
+                        <li><a href="#portfolio"><i class="fa-solid fa-house"></i>Portfolio</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-house"></i>Contact</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
-                <div class="header-text">
-                    <h1>Hi, I'm <br><span>Esther Shue</span><br>from the <br>University of Maryland</h1>
+            </div>
+        </div>
+        <!------------------------- home page ------------------------->
+        <div id="home">
+            <div class="container">
+                <hr>
+                <div class="home-text">
+                    <h1><span>Esther Shue</span><br>Electrical Engineering Student</h1>
                 </div>
                 <hr>
             </div>
@@ -32,6 +42,7 @@
         <!------------------------- about me ------------------------->
         <div id="about">
             <div class="container">
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="about-col-1">
                         <img src="images/testudo.jpg">
@@ -125,9 +136,10 @@
                     <div class="work">
                         <div>
                             <p>Jan 2023-May 2023</p>
-                            <li>Design an Over Terrain Vehicle(OTV) to navigate terrains, detect and extinguish fires, and transmit data</li>
+                            <li>Design an Over Terrain Vehicle(OTV) to navigate randomized terrains, detect and extinguish fires, and transmit data</li>
                             <li>Construct a codebase to integrate microtechnologies into circuit boards and facilitate component interactions</li> 
-                            <li>Collaborate with a team to develop the OTV within a constrained budget and adhering to safety regulations</li> 
+                            <li>Collaborate with a team of engineers in various fields to develop the OTV within a constrained budget and adhering to safety regulations</li> 
+                            <a href="https://sites.google.com/terpmail.umd.edu/calcifers-minions/home?authuser=2">Link to Project Website</a>
                          </div>
                         <div class="layer">
                             <img src="images/work2.jpg">
