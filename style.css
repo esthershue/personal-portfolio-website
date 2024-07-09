@@ -86,7 +86,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 .container{
     padding: 50px 10%;
     align-items: center;
-    background: url('images/circuit.png');
+    background: url('images/circuit.png'); /* NOT SHOWING UP?? */
 }
 .home-text{
     margin-top: 10%;

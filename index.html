@@ -15,7 +15,7 @@
             <div class="navbar-container">
                 <nav>
                     <h1>Esther Shue</h1>
-                    <ul id="sidemenu">
+                    <ul id="sidemenu"> <!-- navbar/sidemenu contents, icons hidden when in desktop mode -->
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                         <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li> <!--create a tag to make a clickable link-->
                         <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
@@ -30,7 +30,7 @@
         <!------------------------- home page ------------------------->
         <div id="home">
             <div class="container">
-                <img src="images" class="circuit">
+                <img src="C:\Users\meich\OneDrive\Desktop\Personal Website Stuff\images\circuit.png" class="circuit">
                 <div class="home-text">
                     <h1>Esther Shue<span class="mandarin-text">許美晴</span>
                         <br>Electrical Engineering Student <span>電機工程專業學生</span></h1>
@@ -130,13 +130,13 @@
                 <h1 class="sub-title">My Work</h1>
                 <div class="work-list">
                     <div class="work">
-                         <div>
+                         <div> <!-- text underneath the layer -->
                             <p>June 2024-Present</p>
                             <li>Develop a website to present a professional portfolio and projects with cross-device compatibility</li>
                             <li>Utilize HTML, CSS, and JavaScript for content rendering and interactive user experience</li>  
                          </div>
                         <div class="layer">
-                            <img src="images/work1.jpg">
+                            <img src="images/work1.jpg"> <!-- image on top of layer -->
                             <h3>Personal Portfolio Website</h3>
                             <p2>Hover to read more</p2>
                             <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
@@ -156,8 +156,6 @@
                             <p2>Hover to read more</p2>
                             <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
                         </div>
-                        
-
                     </div>
                     <div class="work">
                         <div>
@@ -182,20 +180,20 @@
                 <div class="row"> <!-- create two columns-->
                     <div class="contact-left">
                         <h1 class="sub-title">Contact Me</h1>
-                        <p>Click icon to copy to clipboard:</p>
-                        <div class="social-icons">
+                        <p>Click icon to copy to clipboard:</p> 
+                        <div class="social-icons"> <!-- contact info -->
                             <p id="email"><button onclick="copyText('email')"><i class="fa-solid fa-envelope"></i></button>estherfshue@gmail.com</p>
                             <p id="phone"><button onclick="copyText('phone')"><i class="fa-solid fa-phone"></i></button>(240)-389-7504</p>
                             <p id="github"><button onclick="copyText('github')"><i class="fa-brands fa-github"></i></button>https://github.com/esthershue</p>
                             <p id="linkedin"><button onclick="copyText('linkedin')"><i class="fa-brands fa-linkedin"></i></button>www.linkedin.com/in/esthershue</p>
                         </div>
-                        <div class="resume">
+                        <div class="resume"> <!-- reserved to add resume -->
 
                         </div>
-                        <a href="images/Esther_Shue_Resume.pdf" download class="btn btn2">Download Resume</a>
+                        <a href="images/Esther_Shue_Resume.pdf" download class="btn btn2">Download Resume</a> <!-- downloads resume when button is clicked -->
                     </div>
                     <div class="contact-right">
-                        <form name="submit-to-google-sheet">
+                        <form name="submit-to-google-sheet"> <!-- content sent to google sheet -->
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -210,33 +208,39 @@
             </div>
          </div>
 
-        <script>
+
+         <!------------------------- javascript ------------------------->
+
+         <!-- for interactive tab links in about section -->
+         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
             
             function opentab(tabname){
                 for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
+                    tablink.classList.remove("active-link"); /* remove tablinks when another is clicked on */
                 }
                 for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab");
+                    tabcontent.classList.remove("active-tab"); /* remove tab contents when another is clicked on */
                 }
                 event.currentTarget.classList.add("active-link"); /* display underline when clicked on */
-                document.getElementById(tabname).classList.add("active-tab");
+                document.getElementById(tabname).classList.add("active-tab"); /* display correct tab content when clicked on */
             }
         </script>
 
+        <!-- for sidemenu in mobile view -->
         <script>
             var sidemenu = document.getElementById("sidemenu");
 
             function openmenu(){
-                sidemenu.style.right = "0";
+                sidemenu.style.right = "200px"; /* set default opened menu to 200 to the left*/
             }
             function closemenu(){
-                sidemenu.style.right = "-200px";
+                sidemenu.style.right = "0px"; /* move menu back to 0px (out of view) */
             }
         </script>
 
+        <!-- collecting data from submission form to google sheet -->
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyIvZHNKmIXWS_UX2nse1X3yJp2w88BKtNWo-IE0XTjX_YFX3UYock238sc6_s2OEHuYA/exec';
             const form = document.forms['submit-to-google-sheet'];
@@ -247,29 +251,29 @@
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                     .then(response => {
                         function responseMessage() {
-                            msg.innerHTML = "Your response has been recorded. Thank you!";
+                            msg.innerHTML = "Your response has been recorded. Thank you!"; /* confirmation message */
                         }
                         setTimeout(responseMessage);
                         form.reset()
                     })
-                    .catch(error => console.error('Error!', error.message))
+                    .catch(error => console.error('Error!', error.message)) /* error message */
             })
         </script>
 
+        <!-- copying in contact info section -->
         <script>
             function copyText(elementId) {
                 var element = document.getElementById(elementId);
                 var text = element.textContent.trim();
 
-                navigator.clipboard.writeText(text).then(function() {
+                navigator.clipboard.writeText(text).then(function() { /* write to clipboard */
                     alert("Copied to clipboard.");
                 }).catch(function(error) {
-                    console.error("Failed to copy text.", error);
+                    console.error("Failed to copy text.", error); /* error message */
                     alert("Failed to copy text.");
                 });
                 
             }
         </script>
-
     </body>
 </html>
