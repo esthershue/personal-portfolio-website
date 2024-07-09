@@ -1,7 +1,6 @@
 *{
    margin: 0;
    padding: 0;
-   font-family: 'Calibri', sans-serif;
    box-sizing: border-box; 
 }
 html{
@@ -30,6 +29,7 @@ body{
     align-items: center;
     background-color: #213240;
     position: relative;
+    font-family: 'Raleway', sans-serif;
 }
 hr{
     height: 10px;
@@ -99,11 +99,13 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     font-size: 55px;
     padding: 40px;
     color: #213240;
+    font-family: 'Inter', serif;
 }
 .home-text h1 span{
     color: #6ed3cf;
     font-size: 60px;
     float: right;
+    font-family: 'Raleway', sans-serif;
 }
 .mandarin-text{
     writing-mode: vertical-rl;
@@ -136,20 +138,26 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .about-col-2{
     flex-basis: 60%;
+    font-family: 'Raleway', sans-serif;
 }
 .about-col-2 p{
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
 }
 .sub-title{
     margin-bottom: 2.5%;
     font-size: 60px;
     font-weight: 600;
     color: #213240;
+    font-family: 'Raleway', sans-serif;
 }
 .tab-titles{
     display: flex;
     margin: 20px 0 20px;
     position: relative;
+}
+.tab-titles p{
+    font-size: 18px;
 }
 .tab-links{
     margin-right: 50px;
@@ -177,7 +185,9 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .tab-contents ul li span{
     color: #213240;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
 }
 .tab-contents{
     display: none;
@@ -207,6 +217,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     margin-top: 40px;
     margin-bottom: 150px;
     position: relative;
+    font-family: 'Raleway', sans-serif;
 }
 .experience div{
     background: #6ed3cf;
@@ -222,10 +233,11 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .experience div h2{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 15px;
     padding: 20px;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 .experience div a{
     text-decoration: none;
@@ -234,12 +246,15 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     font-weight: bold;
     margin-top: 20px;
     display: inline-block;
+    font-family: 'DM Sans', sans-serif;
 }
 .experience div p{
     display: inline-block;
     font-weight: 500;
     font-size: 20px;
     color: #ff004f;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 20px;
 }
 .experience div ul{
     color: #fff;
@@ -253,6 +268,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 /* ------------------------- portfolio ------------------------- */
 #portfolio{
     padding: 28px 0; /* 50 from top and bottom ,0 from left and right */
+    font-family: 'Raleway', sans-serif;
 }
 .work-list{
     display: grid;
@@ -269,17 +285,21 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     height: 500px;
 }
 .work div p{
-    text-align: left;
-    font-size: 20px;
-    padding: 50px;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 60px;
     color: #213240;
     opacity: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 .work div li{
-    font-size: 18px;
+    font-size: 16px;
     padding: 20px 30px;
     text-align: left;
     opacity: 0;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .layer{
@@ -305,17 +325,19 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     align-items: center;
 }
 .layer h3{
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 20px;
     margin-bottom: 0px;
     font-size: 25px;
+    font-family: 'Raleway', sans-serif;
 }
 .layer p2{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     color: #fff;
     opacity: 1;
     margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
 }
 .work:hover img{
     transform: scale(1.1);
@@ -355,19 +377,22 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 }
 .contact-left{
     flex-basis: 35%;
+    font-family: 'Raleway', sans-serif;
 }
 .contact-right{
     flex-basis: 60%;
+    font-family: 'Raleway', sans-serif;
 }
 .contact-left p{
     margin-top: 30px;
     color: #213240;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
 }
 .contact-left p i{
     color: #b58ee1;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .social-icons{
     margin-top: 30px;
@@ -402,7 +427,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     border-color: #b58ee1;
     cursor: pointer;
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
 }
 .btn.btn2:hover{
     border-color: #e62739;
@@ -419,14 +444,15 @@ form input, form textarea{
     padding: 15px;
     margin: 15px 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 6px;
     cursor: text;
     position: relative;
+    font-family: 'DM Sans', sans-serif;
 }
 form .btn2{
     padding: 14px 60px;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
     position: relative;
@@ -438,6 +464,7 @@ form .btn2{
     background: #213240;
     font-weight: bold;
     margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 /* ------------------------- for mobile view ------------------------- */
