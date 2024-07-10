@@ -17,14 +17,14 @@
                 <nav>
                     <h1>Esther Shue</h1>
                     <ul id="sidemenu"> <!-- navbar/sidemenu contents, icons hidden when in desktop mode -->
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                         <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li> <!--create a tag to make a clickable link-->
                         <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
                         <li><a href="#experience"><i class="fa-solid fa-briefcase"></i>Experience</a></li>
                         <li><a href="#portfolio"><i class="fa-regular fa-folder-open"></i>Portfolio</a></li>
                         <li><a href="#contact"><i class="fa-solid fa-comment"></i>Contact</a></li>
                     </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    <i class="fa-solid fa-bars" onclick="openMenu()"></i>
                 </nav>
             </div>
         </div>
@@ -50,9 +50,9 @@
                             Maryland, College Park. I am looking for an internship opportunity to gain hands-on experience in the 
                             following fields: real time software/firmware/hardware with a focus on digital/analog communications networking.</p>
                             <div class="tab-titles">
-                                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                                <p class="tab-links" onclick="opentab('activities')">Activities</p>
-                                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links active-link" onclick="openTab('education')">Education</p>
+                                <p class="tab-links" onclick="openTab('activities')">Activities</p>
+                                <p class="tab-links" onclick="openTab('skills')">Skills</p>
                             </div>
                             <div class="tab-contents active-tab" id="education"> <!--education content-->
                                 <ul>
@@ -199,7 +199,7 @@
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
-                        <span id="msg" style="font-size: 16; color:black "></span>
+                        <span id="msg" style="font-size: 16; color:black; margin-top: 3px;"></span>
                     </div>
                 </div>
             </div>
@@ -207,24 +207,5 @@
                 <p>Copyright <i class="fa-regular fa-copyright"></i> Esther Shue 2024</i></p>
             </div>
          </div>
-
-         <!------------------------- javascript ------------------------->
-
-         <!-- for interactive tab links in about section -->
-        <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link"); /* remove tablinks when another is clicked on */
-                }
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab"); /* remove tab contents when another is clicked on */
-                }
-                event.currentTarget.classList.add("active-link"); /* display underline when clicked on */
-                document.getElementById(tabname).classList.add("active-tab"); /* display correct tab content when clicked on */
-            }
-        </script>
     </body>
 </html>
