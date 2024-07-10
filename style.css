@@ -1,7 +1,7 @@
 *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 html{
     scroll-behavior: smooth;
@@ -16,7 +16,6 @@ body{
 #navbar{
     width: 100%;
     height: 10vh;
-    background-image: url(images/circuit.png);
     background-size: cover; /* making image the background */
     background-position: center;
     background-repeat: no-repeat;
@@ -30,13 +29,6 @@ body{
     background-color: #213240;
     position: relative;
     font-family: 'Raleway', sans-serif;
-}
-hr{
-    height: 10px;
-    border-top: 10px solid #213240;
-    border-bottom: solid #213240;
-    margin-top: 20px;
-    width: 100%;
 }
 nav{
     display: flex;
@@ -86,18 +78,20 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
 .container{
     padding: 50px 10%;
     align-items: center;
-    background: url('images/circuit.png'); /* NOT SHOWING UP?? */
+    /*background: url('images/circuit.png'); /* NOT SHOWING UP?? */
 }
 .home-text{
     margin-top: 10%;
     text-align: left;
     display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .home-text h1{
     font-size: 55px;
     padding: 40px;
     color: #213240;
-    font-family: 'Inter', serif;
+    font-family: 'Raleway', sans-serif;
 }
 .home-text h1 span{
     color: #6ed3cf;
@@ -469,6 +463,9 @@ nav .fa-regular{ /* hide icons */
 @media screen and (max-width: 600px){
     #navbar{
         background-color: #e1e8f0;
+    }
+    .navbar-container{
+        padding: 25px 10%;
     }
     .navbar-container h1{
         font-size: 16px;
