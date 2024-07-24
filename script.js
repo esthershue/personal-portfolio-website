@@ -3,7 +3,7 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
             
-    window.openTab = function(){
+    window.openTab = function(tabname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link"); // remove tablinks when another is clicked on
         }

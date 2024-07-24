@@ -161,7 +161,7 @@ nav ul li a:hover::after{ /* to have the line appear when the user hovers over t
     transition: 0.4s;
 }
 .tab-links.active-link::after{
-    width: 50%;
+    width: 100%;
 }
 .tab-contents ul li{
     list-style: none;
